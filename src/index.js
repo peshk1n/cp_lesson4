@@ -11,8 +11,8 @@ function setup() {
         const resultDiv = document.getElementById('result');
 
         try {
-            const result = mm.diff(expr, variable);
-            resultDiv.textContent = `d(${expr})/d${variable} = ${result}`;
+            const poly = mm.parsePoly(expr);
+            resultDiv.textContent = `d(${expr})/d${variable} = ${mm.toString(mm.diff(poly, variable))}`;
         } catch (error) {
             alert(`Ошибка: ${error.message}`);
         }
