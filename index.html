@@ -5,17 +5,26 @@
     <meta charset="UTF-8"/>
 
     <script src="src/index.js" type="module"></script>
+
+    <style>
+        body { margin: 20px; }
+        div, h1 { margin-bottom: 20px;}
+    </style>
 </head>
 
 <body>
-<h1>Implement the symbolic diff here</h1>
-<div id="container">
-
-</div>
-<div>
-    <button id="demoButton">
-        Add something
-    </button>
-</div>
+    <h1>Дифференцирование полиномов</h1>
+    <div>
+        <label for="expr">Выражение:</label>
+        <input type="text" id="expr">
+    </div>
+    <div>
+        <label for="variable">Переменная:</label>
+        <input type="text" id="variable">
+    </div>
+    <div>
+        <button id="diffButton">Дифференцировать</button>
+    </div>
+        <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
 </body>
 </html>
